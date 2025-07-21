@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fourtech Auto Industries Pvt. Ltd. | Premium Car Services in Pune</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              primary: '#e53e3e',
+              secondary: '#1a202c',
+              accent: '#f56565',
+            },
+            animation: {
+              'bounce-slow': 'bounce 3s infinite',
+              'pulse-slow': 'pulse 5s infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+      }
+      .hero-bg {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1283&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+      @keyframes floating {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-poppins">
+
+    <!-- Header -->
+    <header class="bg-secondary text-white sticky top-0 z-50 shadow-lg">
+      <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <img src="logo.jpg" alt="Fourtech Auto Logo" class="h-14 w-14 rounded-full border-2 border-primary object-cover hover:scale-110 transition duration-300">
+          <h1 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Fourtech Auto Industries</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-primary transition duration-300 font-medium relative group">
+            Home
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#services" class="hover:text-primary transition duration-300 font-medium relative group">
+            Services
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#about" class="hover:text-primary transition duration-300 font-medium relative group">
+            About
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#booking" class="hover:text-primary transition duration-300 font-medium relative group">
+            Booking
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#contact" class="hover:text-primary transition duration-300 font-medium relative group">
+            Contact
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </nav>
+        <button class="md:hidden text-white focus:outline-none" id="menu-toggle">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="md:hidden hidden bg-secondary px-4 pb-4" id="mobile-menu">
+        <a href="#home" class="block py-2 hover:text-primary transition">Home</a>
+        <a href="#services" class="block py-2 hover:text-primary transition">Services</a>
+        <a href="#about" class="block py-2 hover:text-primary transition">About</a>
+        <a href="#booking" class="block py-2 hover:text-primary transition">Booking</a>
+        <a href="#contact" class="block py-2 hover:text-primary transition">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32 text-center relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+        <div class="absolute w-64 h-64 rounded-full bg-primary opacity-10 -top-32 -left-32"></div>
+        <div class="absolute w-96 h-96 rounded-full bg-accent opacity-10 -bottom-64 -right-64"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10" data-aos="fade-up">
+        <h2 class="text-4xl md:text-6xl font-bold mb-6">Premium <span class="text-primary">Car Care</span> Services</h2>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Expert automotive solutions with cutting-edge technology and unparalleled customer service.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="#booking" class="bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 transform hover:scale-105">
+            Book Service Now <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+          <a href="#contact" class="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-full font-semibold shadow-lg transition-all duration-300 transform hover:scale-105">
+            Contact Us <i class="fas fa-phone ml-2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full flex justify-center pb-4">
+        <a href="#services" class="text-white animate-bounce-slow">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </section>
+
+    
+    <!-- Services -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-primary">Services</span></h3>
+          <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive automotive solutions tailored to keep your vehicle running at peak performance.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-car"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">General Servicing</h4>
+            <p class="text-gray-600 mb-4">Complete check-up, oil change, and maintenance to ensure your car's longevity and performance.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Oil & Filter Change</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Brake Inspection</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Tire Rotation</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Alignment Balancing</li>
+            </ul>
+          </div>
+          
+          <!-- Service 2 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">Engine Diagnostics</h4>
+            <p class="text-gray-600 mb-4">State-of-the-art diagnostic tools to identify and resolve engine issues with precision.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Computerized Scanning</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Performance Tuning</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Emission Testing</li>
+            </ul>
+          </div>
+          
+          <!-- Service 3 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">AC Repair</h4>
+            <p class="text-gray-600 mb-4">Professional AC system servicing to keep you cool and comfortable in all seasons.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Refrigerant Recharge</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Compressor Repair</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Ventilation Cleaning</li>
+            </ul>
+          </div>
+          
+          <!-- Service 4 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">Electrical Systems</h4>
+            <p class="text-gray-600 mb-4">Expert diagnosis and repair of all electrical components in your vehicle.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Battery Service</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Wiring Repair</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Lighting Systems</li>
+            </ul>
+          </div>
+          
+          <!-- Service 5 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-oil-can"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">Transmission Service</h4>
+            <p class="text-gray-600 mb-4">Professional transmission services to ensure smooth gear shifting and optimal performance.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Fluid Change</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Filter Replacement</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Diagnostic Check</li>
+            </ul>
+          </div>
+          
+          <!-- Service 6 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">Body Repair & Painting</h4>
+            <p class="text-gray-600 mb-4">Restore your vehicle's appearance with our professional bodywork and painting services.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Dent Removal</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Scratch Repair</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Full Paint Jobs</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Denting Painting</li>
+            </ul>
+          </div>
+
+
+          <!-- Service 7 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-spa"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">Car Detailing</h4>
+            <p class="text-gray-600 mb-4">Premium cleaning and protection services for your vehicle.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Washing & Foam Wash</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Internal Cleaning</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Body Rubbing & Polishing</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Ceramic Coating</li>
+            </ul>
+          </div>
+          <!-- Service 8 -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-primary text-4xl mb-4">
+              <i class="fas fa-car-crash"></i>
+            </div>
+            <h4 class="font-semibold text-xl mb-3">Insurance Services</h4>
+            <p class="text-gray-600 mb-4">Comprehensive insurance solutions with cashless claim facility.</p>
+            <ul class="text-gray-600 space-y-2">
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> All Insurance Facility</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> 15+ Cashless Company Tie-ups</li>
+              <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Hassle-free Claims</li>
+            </ul>
+          </div>
+          
+          <!-- Service 9 - Insurance Companies -->
+  <div class="service-card bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+    <div class="text-primary text-4xl mb-4">
+      <i class="fas fa-handshake"></i>
+    </div>
+    <h4 class="font-semibold text-xl mb-3">Insurance Partners</h4>
+    <p class="text-gray-600 mb-6">We work with all major insurance providers for seamless cashless claims.</p>
+    
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+      <!-- Current Logos -->
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="tata.jpeg" alt="Tata AIG" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="sbi.png" alt="SBI General" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="icici.jpg" alt="ICICI Lombard" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="royal.jpg" alt="Royal Sundaram" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="reliance.png" alt="Reliance General" class="h-full w-full object-contain">
+      </div>
+      
+      <!-- Placeholder for 10 more logos - you can replace these with actual images later -->
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+      <img src="zuno.png" alt="Zuno" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="hdfc.png" alt="Hdfc Ergo" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="new.png" alt="New India" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="images.jpeg" alt="Oriental" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="acko.png" alt="Acko" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="national.png" alt="National" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="magma.png" alt="Magma" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="future.png" alt="Future Generali" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="liberty.jpg" alt="Liberty" class="h-full w-full object-contain">
+      </div>
+      <div class="flex items-center justify-center bg-white p-2 rounded-lg border border-gray-200 h-20">
+        <img src="kotak.png" alt="Kotak" class="h-full w-full object-contain">
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2" data-aos="fade-right">
+            <div class="relative">
+              <img src="https://www.popularmaruti.com/blog/wp-content/uploads/2022/10/1.jpg" 
+                  alt="Fourtech Auto Workshop" 
+                  class="rounded-xl shadow-xl w-full h-auto">
+              
+            </div>
+          </div>
+          <div class="lg:w-1/2" data-aos="fade-left">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6">About <span class="text-primary">Fourtech Auto</span></h3>
+            <p class="text-gray-600 mb-4">Established in 2022, Fourtech Auto Industries has been providing premium automotive services to Pune's car owners with dedication and expertise.</p>
+            <p class="text-gray-600 mb-6">Our team of certified technicians uses the latest tools and technology to deliver exceptional service that keeps your vehicle running smoothly and efficiently.</p>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="text-primary mt-1 mr-3">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Certified Technicians</h4>
+                  <p class="text-gray-600">Our team undergoes regular training to stay updated with the latest automotive technologies.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-primary mt-1 mr-3">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Genuine Parts</h4>
+                  <p class="text-gray-600">We use only OEM or high-quality aftermarket parts for all repairs and replacements.</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-primary mt-1 mr-3">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold">Customer Satisfaction</h4>
+                  <p class="text-gray-600">Your satisfaction is our priority, and we stand behind our work with comprehensive warranties.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Booking -->
+    <section id="booking" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2" data-aos="fade-right">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6">Book Your <span class="text-primary">Service</span></h3>
+            <p class="text-gray-600 mb-6">Schedule your car service online and save time. Our team will prepare everything for your arrival to minimize wait times.</p>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                  <i class="fas fa-calendar-check text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-1">Easy Scheduling</h4>
+                  <p class="text-gray-600">Choose a date and time that works best for you from our available slots.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                  <i class="fas fa-bell text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-1">Reminder Alerts</h4>
+                  <p class="text-gray-600">We'll send you reminders before your appointment so you don't forget.</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                  <i class="fas fa-clock text-primary text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg mb-1">Quick Service</h4>
+                  <p class="text-gray-600">With prior booking, your vehicle gets attention immediately upon arrival.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2 w-full" data-aos="fade-left">
+            <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+              <h4 class="text-2xl font-bold mb-6 text-center text-primary">Service Appointment</h4>
+              <form id="booking-form" action="https://formspree.io/f/mdkdabpk" method="POST">
+                <input type="hidden" name="_subject" value="New Service Booking from Fourtech Auto Website">
+                <input type="hidden" name="_next" value="#thank-you">
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Full Name</label>
+                  <input type="text" name="name" placeholder="Enter your name" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Mobile Number</label>
+                  <input type="tel" name="phone" placeholder="Enter your mobile number" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Email Address</label>
+                  <input type="email" name="email" placeholder="Enter your email" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent">
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-gray-700 mb-2">Service Date</label>
+                    <input type="date" name="service_date" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                  </div>
+                  
+                  <div>
+                    <label class="block text-gray-700 mb-2">Time Slot</label>
+                    <select name="time_slot" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                      <option value="">Select Time</option>
+                      <option>10:00 AM - 11:00 AM</option>
+                      <option>11:00 AM - 12:00 PM</option>
+                      <option>2:00 PM - 3:00 PM</option>
+                      <option>3:00 PM - 4:00 PM</option>
+                      <option>4:00 PM - 5:00 PM</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Service Required</label>
+                  <select name="service_type" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                    <option value="">Select Service</option>
+                    <option>General Servicing</option>
+                    <option>Engine Diagnostics</option>
+                    <option>AC Repair</option>
+                    <option>Electrical Systems</option>
+                    <option>Transmission Service</option>
+                    <option>Body Repair & Painting</option>
+                    <option>Insurance Services</option>
+                    <option>Car Detailing</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Car Details</label>
+                  <input type="text" name="car_details" placeholder="Make, Model, Year" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Additional Notes</label>
+                  <textarea name="notes" rows="2" placeholder="Any specific issues or requests?" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 transform hover:scale-105">
+                  Confirm Booking <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+              </form>
+              <div id="booking-thank-you" class="hidden text-center py-8">
+                <i class="fas fa-check-circle text-5xl text-green-500 mb-4"></i>
+                <h4 class="text-2xl font-bold mb-2">Thank You!</h4>
+                <p class="text-gray-600 mb-4">Your booking request has been submitted successfully.</p>
+                <p class="text-gray-600">We will contact you shortly to confirm your appointment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">Contact <span class="text-primary">Fourtech Auto</span></h3>
+          <p class="text-gray-600 max-w-2xl mx-auto">Have questions or need assistance? Reach out to our friendly team today.</p>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="lg:w-1/2" data-aos="fade-right">
+            <div class="bg-white p-8 rounded-xl shadow-lg h-full">
+              <h4 class="text-2xl font-bold mb-6 text-primary">Get In Touch</h4>
+              
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-map-marker-alt text-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-lg mb-1">Our Location</h5>
+                    <p class="text-gray-600">Near Gujarwadi Petrol Pump, Katraj, Pune, Maharashtra 411046</p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-phone-alt text-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-lg mb-1">Phone Number</h5>
+                    <p class="text-gray-600">+91-7030928342</p>
+                    <p class="text-gray-600">+91-7030928343</p>
+                    <p class="text-gray-600">+91-7030928344</p>
+                  
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-envelope text-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-lg mb-1">Email Address</h5>
+                    <p class="text-gray-600">fourtechautoind@gmail.com</p>
+                    
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-primary bg-opacity-10 p-3 rounded-full mr-4">
+                    <i class="fas fa-clock text-primary"></i>
+                  </div>
+                  <div>
+                    <h5 class="font-semibold text-lg mb-1">Working Hours</h5>
+                    <p class="text-gray-600">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="lg:w-1/2" data-aos="fade-left">
+            <div class="bg-white p-8 rounded-xl shadow-lg h-full">
+              <h4 class="text-2xl font-bold mb-6 text-primary">Send Us a Message</h4>
+              <form id="contact-form" action="https://formspree.io/f/xrblejlz" method="POST">
+                <input type="hidden" name="_subject" value="New Contact Message from Fourtech Auto Website">
+                <input type="hidden" name="_next" value="#thank-you">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-gray-700 mb-2">Your Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2">Your Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                  </div>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Subject</label>
+                  <input type="text" name="subject" placeholder="Enter subject" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required>
+                </div>
+                
+                <div>
+                  <label class="block text-gray-700 mb-2">Your Message</label>
+                  <textarea name="message" rows="4" placeholder="Enter your message" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-primary focus:border-transparent" required></textarea>
+                </div>
+                
+                <button type="submit" class="bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-300 transform hover:scale-105">
+                  Send Message <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+              </form>
+              <div id="contact-thank-you" class="hidden text-center py-8">
+                <i class="fas fa-check-circle text-5xl text-green-500 mb-4"></i>
+                <h4 class="text-2xl font-bold mb-2">Message Sent!</h4>
+                <p class="text-gray-600 mb-4">Thank you for contacting us.</p>
+                <p class="text-gray-600">We will get back to you as soon as possible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <div class="h-96 w-full" data-aos="fade-up">
+      <iframe
+        class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.1098429643034!2d73.85644207477526!3d18.433321182643425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2eb9ed25d9429%3A0xab633f15b998bb4!2sFour%20Tech%20Auto%20Industries%20PVT.LTD.!5e0!3m2!1sen!2sin!4v1752153473065!5m2!1sen!2sin"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <img src="logo.jpg" alt="Fourtech Auto Logo" class="h-12 w-12 rounded-full border-2 border-primary object-cover">
+              <h3 class="text-xl font-bold">Fourtech Auto</h3>
+            </div>
+            <p class="text-gray-400 mb-4">Your trusted partner for premium automotive services in Pune since 2022.</p>
+            
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#home" class="text-gray-400 hover:text-primary transition">Home</a></li>
+              <li><a href="#services" class="text-gray-400 hover:text-primary transition">Services</a></li>
+              <li><a href="#about" class="text-gray-400 hover:text-primary transition">About Us</a></li>
+              <li><a href="#booking" class="text-gray-400 hover:text-primary transition">Book Service</a></li>
+              <li><a href="#contact" class="text-gray-400 hover:text-primary transition">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-400 hover:text-primary transition">General Servicing</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-primary transition">Engine Diagnostics</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-primary transition">AC Repair</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-primary transition">Electrical Systems</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-primary transition">Body Repair</a></li>
+            </ul>
+          </div>
+          
+          <div>
+    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+    <ul class="space-y-2 text-gray-400">
+      <li class="flex items-start">
+        <i class="fas fa-map-marker-alt mt-1 mr-3 text-primary"></i>
+        <span>Near Gujarwadi Petrol Pump, Katraj, Pune</span>
+      </li>
+      <li class="flex items-start">
+        <i class="fas fa-phone-alt mt-1 mr-3 text-primary"></i>
+        <div>
+          <div>+91-7030928342</div>
+          <div>+91-7030928343</div>
+          <div>+91-7030928344</div>
+        </div>
+      </li>
+      <li class="flex items-start">
+        <i class="fas fa-envelope mt-1 mr-3 text-primary"></i>
+        <span>fourtechautoind@gmail.com</span>
+      </li>
+    </ul>
+  </div>
+        </div>
+        
+        <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+          <p>&copy; 2025 Fourtech Auto Industries Pvt. Ltd. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <div class="fixed bottom-6 right-6 z-50">
+      <a href="https://wa.me/917030928342" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 floating">
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </a>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 bg-primary hover:bg-red-700 text-white p-3 rounded-full shadow-xl z-50 hidden transition-all duration-300">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // Initialize AOS animation library
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+      });
+
+      // Mobile menu toggle
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      });
+
+      // Back to top button
+      const backToTopButton = document.getElementById('back-to-top');
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove('hidden');
+        } else {
+          backToTopButton.classList.add('hidden');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Form submission handling for booking form
+      const bookingForm = document.getElementById('booking-form');
+      bookingForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        fetch(bookingForm.action, {
+          method: 'POST',
+          body: new FormData(bookingForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            bookingForm.style.display = 'none';
+            document.getElementById('booking-thank-you').classList.remove('hidden');
+            window.location.hash = 'thank-you';
+          } else {
+            throw new Error('Form submission failed');
+          }
+        })
+        .catch(error => {
+          alert('There was a problem submitting your form. Please try again or contact us directly.');
+        });
+      });
+
+      // Form submission handling for contact form
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: {
+            'Accept': 'application/json'
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            contactForm.style.display = 'none';
+            document.getElementById('contact-thank-you').classList.remove('hidden');
+            window.location.hash = 'thank-you';
+          } else {
+            throw new Error('Form submission failed');
+          }
+        })
+        .catch(error => {
+          alert('There was a problem submitting your form. Please try again or contact us directly.');
+        });
+      });
+    </script>
+  </body>
+  </html>
